@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DMNS Character Details</string>
+    <string name="character_name">character name</string>
+    <string name="detail">"detail"</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="with_cardview">with CardView</string>
+    <string name="devloper">About Developer</string>
+    <string name="full_name">Full Name</string>
+    <string name="more_exp">more explanation</string>
+    <string name="more_exp_sec">more and more explanation</string>
+</resources>

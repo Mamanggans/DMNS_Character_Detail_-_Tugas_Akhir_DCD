@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".character_exp">
+<!--    tools:context=".tips_activity">-->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimary"
+            app:title="Character Detail"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/dmns_bg"
+                android:scaleType="centerCrop"/>
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hometips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:src="@drawable/ic_home_white_24dp"
+        android:tint="@android:color/white"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom|right|end" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="8sp"
+                android:padding="16dp"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="25sp"
+                tools:text="@string/character_name"></TextView>
+
+            <TextView
+                android:id="@+id/tv_item_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                tools:text="detail"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:padding="10dp"
+                android:text="the more information about this character is below "
+                android:textColor="@android:color/black"
+                android:textSize="14dp"></TextView>
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/full_name"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:justificationMode="inter_word"-->
+            <!--        android:padding="10dp"-->
+            <!--        android:textColor="@android:color/holo_blue_light"-->
+            <!--        android:textSize="18dp"-->
+            <!--        tools:text="@string/full_name"></TextView>-->
+
+            <ImageView
+                android:id="@+id/img_item_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                tools:src="@tools:sample/avatars"></ImageView>
+
+            <TextView
+                android:id="@+id/more_exp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|end"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                tools:text="@string/more_exp"></TextView>
+
+
+            <ImageView
+                android:id="@+id/img_item_photo_sec"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                tools:src="@tools:sample/avatars" />
+
+            <Button
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:id="@+id/back_home"
+                android:textColor="@color/white"
+                android:text="Home"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:elevation="5dp"
+                android:background="@drawable/joinbtn"/>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
